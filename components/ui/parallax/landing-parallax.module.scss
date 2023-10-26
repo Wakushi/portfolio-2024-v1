@@ -1,0 +1,95 @@
+@import "../../../styles/variables.scss";
+
+.parallax_container {
+	position: relative;
+	overflow: hidden;
+	height: calc(100vh + 200px);
+	background-image: url("../../../assets/parallax/parallax-base.webp");
+	background-position: 100% 10%;
+
+	.landing_content_top_transition {
+		position: absolute;
+		z-index: 7;
+		bottom: 0;
+		width: 100%;
+		height: 500px;
+		background: linear-gradient(
+			to top,
+			$primary-color 30%,
+			transparent 80%
+		);
+	}
+}
+
+.parallax_layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.parallax_mountains {
+	background-image: url("../../../assets/parallax/parallax-mountains.png");
+	background-size: cover;
+	z-index: 1;
+	background-position: 100% 50%;
+}
+
+.parallax_trees {
+	background-image: url("../../../assets/parallax/parallax-trees.png");
+	background-size: cover;
+	z-index: 3;
+	background-position: 100% 50%;
+	scale: 1.005;
+}
+
+.parallax_water {
+	background-image: url("../../../assets/parallax/parallax-water.png");
+	background-size: cover;
+	z-index: 3;
+	background-position: 100% 50%;
+}
+
+.parallax_left_rock {
+	background-image: url("../../../assets/parallax/parallax-left-rock.png");
+	background-size: cover;
+	z-index: 5;
+	background-position: 100% 65%;
+}
+
+.parallax_right_rock {
+	background-image: url("../../../assets/parallax/parallax-right-rock.png");
+	background-size: cover;
+	z-index: 5;
+	background-position: 100% 45%;
+}
+
+.hero_content {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	width: 70%;
+
+	p {
+		animation: fade-in 2s 3s ease-in forwards;
+		opacity: 0;
+		line-height: 1;
+		text-shadow: 1px 1px 42px rgba(0, 0, 0, 0.89);
+		font-family: "Cormorant";
+		font-weight: 700;
+		align-self: flex-start;
+		font-size: 4vw;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}

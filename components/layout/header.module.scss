@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	padding: 2rem;
+	background: -webkit-linear-gradient(bottom, transparent, rgb(11, 5, 26));
+	.nav_link {
+		font-size: 1rem;
+
+		&.active {
+			background-color: rgba(255, 255, 255, 0.034);
+			backdrop-filter: blur(2px);
+			padding: 0.4rem 1.7rem;
+			border-radius: 40px;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@import "../styles/variables.scss";
+
+.main_container {
+	position: relative;
+	background-color: $primary-color;
+	section {
+		min-height: calc(100vh + 200px);
+	}
+}
+
+.grain {
+	position: absolute;
+	top: 0;
+	background-color: $primary-color;
+	opacity: 0;
+	height: calc(100vh + 200px);
+	width: 100%;
+	z-index: 7;
+}
+
+.landing_content {
+	position: relative;
+}

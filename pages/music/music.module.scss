@@ -1,0 +1,15 @@
+.music_page {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+	.music_page_content {
+		max-width: 1300px;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}
