@@ -4,7 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	height: calc(100vh + 200px);
-	background-image: url("../../../assets/parallax/parallax-base.webp");
+	background-image: url("../../../public/assets/parallax/parallax-base.webp");
 	background-position: 100% 10%;
 
 	.landing_content_top_transition {
@@ -28,14 +28,14 @@
 }
 
 .parallax_mountains {
-	background-image: url("../../../assets/parallax/parallax-mountains.png");
+	background-image: url("../../../public/assets/parallax/parallax-mountains.png");
 	background-size: cover;
 	z-index: 1;
 	background-position: 100% 50%;
 }
 
 .parallax_trees {
-	background-image: url("../../../assets/parallax/parallax-trees.png");
+	background-image: url("../../../public/assets/parallax/parallax-trees.png");
 	background-size: cover;
 	z-index: 3;
 	background-position: 100% 50%;
@@ -43,21 +43,21 @@
 }
 
 .parallax_water {
-	background-image: url("../../../assets/parallax/parallax-water.png");
+	background-image: url("../../../public/assets/parallax/parallax-water.png");
 	background-size: cover;
 	z-index: 3;
 	background-position: 100% 50%;
 }
 
 .parallax_left_rock {
-	background-image: url("../../../assets/parallax/parallax-left-rock.png");
+	background-image: url("../../../public/assets/parallax/parallax-left-rock.png");
 	background-size: cover;
 	z-index: 5;
 	background-position: 100% 65%;
 }
 
 .parallax_right_rock {
-	background-image: url("../../../assets/parallax/parallax-right-rock.png");
+	background-image: url("../../../public/assets/parallax/parallax-right-rock.png");
 	background-size: cover;
 	z-index: 5;
 	background-position: 100% 45%;
@@ -75,12 +75,49 @@
 		animation: fade-in 2s 3s ease-in forwards;
 		opacity: 0;
 		line-height: 1;
-		text-shadow: 1px 1px 42px rgba(0, 0, 0, 0.89);
+		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.89);
 		font-family: "Cormorant";
+		font-size: 4vw;
 		font-weight: 700;
 		align-self: flex-start;
-		font-size: 4vw;
 	}
+
+	.small_text {
+		margin-top: 1.3rem;
+		font-size: 1.7vw;
+		font-weight: 400;
+		align-self: flex-end;
+		width: 50%;
+		text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.89);
+	}
+}
+
+.glowing_star,
+.shooting_star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+	opacity: 0;
+}
+
+.star_a {
+	animation: shoot-a 4s linear infinite;
+}
+.star_b {
+	animation: shoot-b 3s linear infinite;
+}
+
+.glowing_star {
+	width: 2px;
+	height: 2px;
+	top: 10%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	animation: glow 2s 2s linear infinite;
 }
 
 @keyframes fade-in {
@@ -91,5 +128,64 @@
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes shoot-a {
+	0% {
+		top: 30%;
+		left: 10%;
+		opacity: 1;
+		transform: translateX(0) translateY(0);
+	}
+	40% {
+		opacity: 1;
+	}
+	60% {
+		top: 20%;
+		left: 200%;
+		opacity: 0;
+		transform: translateX(-1000px) translateY(-500px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes shoot-b {
+	0% {
+		top: 40%;
+		left: 10%;
+		opacity: 1;
+		transform: translateX(0) translateY(0);
+	}
+	40% {
+		opacity: 1;
+	}
+	60% {
+		top: 60%;
+		left: 200%;
+		opacity: 0;
+		transform: translateX(-800px) translateY(-800px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes glow {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.5);
 	}
 }

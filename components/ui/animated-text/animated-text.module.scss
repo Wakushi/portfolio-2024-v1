@@ -2,12 +2,10 @@
 	opacity: 0;
 	display: inline-block;
 	animation: fade-in 2s 6s ease-in-out forwards;
-	font-size: 9vw;
 	line-height: 1;
-	text-shadow: 1px 1px 42px rgba(0, 0, 0, 0.89);
+	text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.89);
 	font-family: "Cormorant";
 	font-weight: 700;
-	white-space: nowrap;
 }
 
 @keyframes fade-in {

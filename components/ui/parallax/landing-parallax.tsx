@@ -60,6 +60,11 @@ export default function LandingParallax() {
 	return (
 		<div className={`${classes.parallax_container}`}>
 			<CloudTransition />
+
+			<div className={`${classes.shooting_star} ${classes.star_a}`}></div>
+			<div className={`${classes.shooting_star} ${classes.star_b}`}></div>
+			<div className={`${classes.glowing_star}`}></div>
+
 			<div
 				ref={mountainsRef}
 				className={`${classes.parallax_layer} ${classes.parallax_mountains}`}
@@ -85,8 +90,11 @@ export default function LandingParallax() {
 				className={`${classes.hero_content} flex--center flex--column`}
 			>
 				<p>Hi, I'm Maxime</p>
-				<h3></h3>
-				<AnimatedText text="A web developer" delay={20} />
+				<AnimatedText text="A web developer" delay={20} fontSize="10" />
+				<p className={classes.small_text}>
+					with a passion for crafting experiences that are engaging,
+					user-friendly and secure.{" "}
+				</p>
 			</div>
 		</div>
 	)
