@@ -1,0 +1,48 @@
+@import "../../../styles/variables.scss";
+
+.blur {
+	position: absolute;
+	z-index: 1;
+	top: 40%;
+	left: 40%;
+	transform: translate(-50%, -50%) scale(7.5);
+	height: 100px;
+	width: 100px;
+	background-color: $secondary-color;
+	box-shadow: 0 0 100px $secondary-color;
+	filter: blur(60px);
+	animation: animateHeroBlur 20s infinite;
+	pointer-events: none;
+
+	@media (width < 900px) {
+		animation: none;
+	}
+}
+
+@-moz-document url-prefix() {
+	.blur {
+		opacity: 0.4;
+	}
+}
+
+@keyframes animateHeroBlur {
+	0% {
+		top: 35%;
+		left: 35%;
+		height: 70px;
+		width: 70px;
+	}
+	50% {
+		top: 80%;
+		left: 60%;
+		filter: blur(50px);
+		height: 90px;
+		width: 90px;
+	}
+	100% {
+		top: 35%;
+		left: 35%;
+		height: 70px;
+		width: 70px;
+	}
+}

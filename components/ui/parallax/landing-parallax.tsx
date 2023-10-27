@@ -64,6 +64,7 @@ export default function LandingParallax() {
 			<div className={`${classes.shooting_star} ${classes.star_a}`}></div>
 			<div className={`${classes.shooting_star} ${classes.star_b}`}></div>
 			<div className={`${classes.glowing_star}`}></div>
+			<div className={`${classes.mist}`}></div>
 
 			<div
 				ref={mountainsRef}
@@ -89,9 +90,12 @@ export default function LandingParallax() {
 			<div
 				className={`${classes.hero_content} flex--center flex--column`}
 			>
-				<p>Hi, I'm Maxime</p>
-				<AnimatedText text="A web developer" delay={20} fontSize="10" />
-				<p className={classes.small_text}>
+				<p className="fade-in-bottom">
+					Hi, I'm{" "}
+					<span className="text-italic text-bold">Maxime</span>
+				</p>
+				<AnimatedText text="A web developer" delay={20} fontSize="9" />
+				<p className={`${classes.small_text} fade-in-bottom`}>
 					with a passion for crafting experiences that are engaging,
 					user-friendly and secure.{" "}
 				</p>

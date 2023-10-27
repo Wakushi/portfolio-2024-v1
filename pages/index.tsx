@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react"
-import classes from "./landing.module.scss"
+import classes from "./index.module.scss"
 import LandingParallax from "@/components/ui/parallax/landing-parallax"
 import Works from "@/components/works/works"
+import { proWorks, sideWorks } from "@/public/assets/data/works"
+import { ProjectType } from "@/components/works/works"
 
 export default function Landing() {
 	const grainRef = useRef<HTMLDivElement | null>(null)
@@ -51,10 +53,15 @@ export default function Landing() {
 			<div className={`${classes.landing_content}`}>
 				{/* WORK SECTION */}
 				<div className={classes.white_line}></div>
-				<Works />
+				<Works works={proWorks} projectType={ProjectType.PRO} />
+				<div className={classes.white_line}></div>
+				<Works works={sideWorks} projectType={ProjectType.PERSO} />
 				{/* PROFILE SECTION */}
 				<div className={classes.white_line}></div>
-				<section id="profile" className={`${classes.profile_section} flex`}>
+				<section
+					id="profile"
+					className={`${classes.profile_section} flex`}
+				>
 					<div className={`${classes.profile_part} flex--center`}>
 						<div
 							onMouseMove={handleMouseMove}

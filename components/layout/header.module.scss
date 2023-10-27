@@ -4,8 +4,9 @@
 	position: fixed;
 	width: 100%;
 	z-index: 10;
-	padding: 2rem;
+	padding: 1rem;
 	background: -webkit-linear-gradient(bottom, transparent, rgb(11, 5, 26));
+	opacity: 0;
 
 	ul {
 		position: relative;
@@ -18,7 +19,9 @@
 			left: 0;
 			height: 40px;
 			width: 80px;
-			background-color: rgba(255, 255, 255, 0.034);
+			background-color: rgba(202, 179, 255, 0.151);
+			opacity: 0.6;
+			box-shadow: inset 0px 0px 10px 0px #000000;
 			backdrop-filter: blur(2px);
 			padding: 0.4rem 1.7rem;
 			border-radius: 60px;
@@ -27,11 +30,33 @@
 		}
 	}
 
-	.nav_link {
-		li {
-			font-size: 1rem;
-			font-weight: 600;
-			padding: 1rem 0;
+	li {
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 1rem 0;
+
+		a {
+			position: relative;
+
+			span.nav_link {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					background-color: $secondary-color;
+					width: 0%;
+					height: 2px;
+					transition: 0.4s;
+				}
+
+				&:hover::before,
+				&:focus::before {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

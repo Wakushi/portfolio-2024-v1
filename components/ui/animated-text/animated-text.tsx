@@ -4,12 +4,14 @@ interface AnimatedTextProps {
 	text: string
 	delay: number
 	fontSize?: string
+	subtitle?: boolean
 }
 
 export default function AnimatedText({
 	text,
 	delay,
-	fontSize
+	fontSize,
+	subtitle
 }: AnimatedTextProps) {
 	function randomSmoothDisplay(word: string) {
 		return word.split("").map((letter, index) => {
@@ -22,7 +24,9 @@ export default function AnimatedText({
 
 			return (
 				<span
-					className={classes.animated_letter}
+					className={`${classes.animated_letter}  fade-in-bottom ${
+						subtitle ? classes.subtitle : ""
+					}`}
 					style={styles}
 					key={index + letter}
 				>
@@ -33,7 +37,7 @@ export default function AnimatedText({
 	}
 
 	return (
-		<div className={`${classes.animated_text}`}>
+		<div>
 			<span>{randomSmoothDisplay(text)}</span>
 		</div>
 	)

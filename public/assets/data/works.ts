@@ -1,4 +1,31 @@
-export const works = [
+export const proWorks = [
+	{
+		image: "/assets/images/projects/art-crowdfunding.webp",
+		desc: "A platform that allows users to invest in various work of art, manage their shares and wallet. I've worked as a team member on the front-end of this application.",
+		type: "Web app",
+		title: "Art crowdfunding",
+		gitlink: "",
+		link: ""
+	},
+	{
+		image: "/assets/images/projects/medical.webp",
+		desc: "A teleconsultation and appointment management medical platform. I've worked as a team member on the back-end and front-end of this application.",
+		type: "Web app",
+		title: "Medical platform",
+		gitlink: "",
+		link: ""
+	},
+	{
+		image: "/assets/images/projects/housing.webp",
+		desc: "A solution to enable the client's employees to easily request housing and help HRs manage the progress of each file through an administration interface.",
+		type: "Saas",
+		title: "Housing platform",
+		gitlink: "",
+		link: ""
+	}
+]
+
+export const sideWorks = [
 	{
 		image: "/assets/images/projects/multisig.webp",
 		desc: "MultiSig Factory is a web app that allows anyone to create and manage a MultiSig wallet. Users can easily create, confirm and execute transactions from their multi-signature wallet. (Sepolia testnet only)",

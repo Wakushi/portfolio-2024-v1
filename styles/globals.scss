@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Besley:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;600;700&display=swap");
+@import "../styles/variables.scss";
+@import "~remixicon/fonts/remixicon.css";
 
 @font-face {
 	font-family: "Cormorant";
@@ -109,4 +111,86 @@ img {
 	gap: 4rem;
 }
 
+.text-italic {
+	font-style: italic;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.remix-icon {
+	font-size: 1.8rem;
+	opacity: 0.7;
+	transition: 500ms;
+	font-weight: initial;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
 // KEYFRAMES
+
+.fade-in-top {
+	animation: fade-in-top 2s 3s ease-in forwards;
+}
+
+.fade-in-bottom {
+	animation: fade-in-bottom 2s 3s ease-in forwards;
+}
+
+@keyframes fade-in-top {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fade-in-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+// SCROLLBAR
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+	width: 10px;
+}
+*::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #ffffff0c;
+}
+
+*::-webkit-scrollbar-track:hover {
+	background-color: #ffffff0c;
+}
+
+*::-webkit-scrollbar-track:active {
+	background-color: #ffffff0c;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background-color: #fff;
+}
