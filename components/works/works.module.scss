@@ -20,7 +20,7 @@
 		left: 0;
 		padding-left: 1rem;
 		font-size: 2.5vw;
-		font-family: "Cormorant", serif;
+		font-family: $third-font;
 		border-bottom: 1px solid #ffffff;
 	}
 
@@ -42,7 +42,7 @@
 			font-size: 8vw;
 			letter-spacing: -4px;
 			text-shadow: $text-shadow;
-			font-family: "Cormorant", serif;
+			font-family: $third-font;
 			font-weight: 800;
 			align-self: baseline;
 		}

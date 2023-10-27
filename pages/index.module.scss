@@ -29,23 +29,4 @@
 		background-color: #3637708a;
 		margin: 0 auto;
 	}
-
-	.profile_section {
-		padding: 8rem 0rem;
-
-		.profile_part {
-			flex: 1;
-
-			.profile_image_container {
-				background-image: url("../public/assets/images/onwards.webp");
-				background-position: 50% 50%;
-				background-size: 140%;
-				width: 600px;
-				height: 600px;
-				box-shadow: $box-shadow;
-				border-radius: 10px;
-				overflow: hidden;
-			}
-		}
-	}
 }

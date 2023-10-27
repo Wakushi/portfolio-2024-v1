@@ -34,10 +34,6 @@ export default function Header() {
 		<header className={`${classes.header} fade-in-top`}>
 			<nav className="flex">
 				<ul className="flex--center gap-xl">
-					<span
-						className={classes.active_link_bubble}
-						ref={linkBubble}
-					></span>
 					<li>
 						<a
 							href="#works"

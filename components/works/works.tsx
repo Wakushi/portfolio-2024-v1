@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import classes from "./works.module.scss"
 import AnimatedText from "../ui/animated-text/animated-text"
-import Blur from "../ui/blur/blur"
 
 interface WorksProps {
 	works: Work[]
@@ -39,7 +38,7 @@ export default function Works({ works, projectType }: WorksProps) {
 			}
 			if (userTouched) return
 			setDisplayedProject((prev) => (prev + 1) % works.length)
-		}, 4000)
+		}, 6000)
 
 		return () => clearInterval(interval)
 	}, [userTouched, works.length])
@@ -103,7 +102,7 @@ export default function Works({ works, projectType }: WorksProps) {
 			<div className={`${classes.work_type} flex gap-l`}>
 				<AnimatedText
 					text={works[displayedProject].type}
-					delay={5}
+					delay={1}
 					fontSize="1.25"
 					subtitle={true}
 				/>

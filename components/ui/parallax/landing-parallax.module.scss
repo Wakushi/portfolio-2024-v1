@@ -1,5 +1,37 @@
 @import "../../../styles/variables.scss";
 
+.hero_content {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	width: 70%;
+
+	p {
+		opacity: 0;
+		line-height: 1.2;
+		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.89);
+		font-family: $secondary-font;
+		font-size: 4vw;
+		font-weight: 300;
+		align-self: flex-start;
+
+		span {
+			font-family: $secondary-font;
+		}
+	}
+
+	.small_text {
+		margin-top: 1.3rem;
+		font-size: 1.7vw;
+		font-weight: 400;
+		align-self: flex-end;
+		width: 50%;
+		text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.89);
+	}
+}
+
 .parallax_container {
 	position: relative;
 	overflow: hidden;
@@ -61,38 +93,6 @@
 	background-size: cover;
 	z-index: 5;
 	background-position: 100% 45%;
-}
-
-.hero_content {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-	width: 70%;
-
-	p {
-		opacity: 0;
-		line-height: 1;
-		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.89);
-		font-family: "Playfair Display";
-		font-size: 4vw;
-		font-weight: 00;
-		align-self: flex-start;
-
-		span {
-			font-family: "Playfair Display";
-		}
-	}
-
-	.small_text {
-		margin-top: 1.3rem;
-		font-size: 1.7vw;
-		font-weight: 400;
-		align-self: flex-end;
-		width: 50%;
-		text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.89);
-	}
 }
 
 .glowing_star,

@@ -2,7 +2,7 @@ export const proWorks = [
 	{
 		image: "/assets/images/projects/art-crowdfunding.webp",
 		desc: "A platform that allows users to invest in various work of art, manage their shares and wallet. I've worked as a team member on the front-end of this application.",
-		type: "Web app",
+		type: "Web application for investors",
 		title: "Art crowdfunding",
 		gitlink: "",
 		link: ""
@@ -10,7 +10,7 @@ export const proWorks = [
 	{
 		image: "/assets/images/projects/medical.webp",
 		desc: "A teleconsultation and appointment management medical platform. I've worked as a team member on the back-end and front-end of this application.",
-		type: "Web app",
+		type: "Web application for doctors",
 		title: "Medical platform",
 		gitlink: "",
 		link: ""
@@ -18,7 +18,7 @@ export const proWorks = [
 	{
 		image: "/assets/images/projects/housing.webp",
 		desc: "A solution to enable the client's employees to easily request housing and help HRs manage the progress of each file through an administration interface.",
-		type: "Saas",
+		type: "Web application for HRs",
 		title: "Housing platform",
 		gitlink: "",
 		link: ""

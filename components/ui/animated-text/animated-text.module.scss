@@ -5,7 +5,7 @@
 	display: inline-block;
 	line-height: 1;
 	text-shadow: $text-shadow;
-	font-family: "Playfair Display";
+	font-family: $secondary-font;
 	font-weight: 700;
 
 	&.subtitle {
