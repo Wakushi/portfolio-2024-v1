@@ -31,7 +31,7 @@ export default function Works({ works, projectType }: WorksProps) {
 		transition: "transform 1s ease-out"
 	}
 
-	const heightFactor = 70
+	const heightFactor = 65
 
 	useEffect(() => {
 		const interval = setInterval(() => {
