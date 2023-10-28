@@ -1,4 +1,4 @@
-declare module "shader-park-core" {
+declare module "*/shader-park-core/dist/shader-park-core.esm.js" {
 	export function createSculptureWithGeometry(
 		geometry: THREE.Geometry | THREE.BufferGeometry,
 		source: string,

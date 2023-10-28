@@ -21,7 +21,8 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"shader-park-core.d.ts"
+		"shader-park-core.esm.d.ts"
 	],
+
 	"exclude": ["node_modules"]
 }
