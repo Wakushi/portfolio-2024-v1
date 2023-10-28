@@ -31,6 +31,8 @@ export default function Works({ works, projectType }: WorksProps) {
 		transition: "transform 1s ease-out"
 	}
 
+	const heightFactor = 70
+
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (Date.now() - lastInteractionTimestamp > 4000) {
@@ -64,7 +66,7 @@ export default function Works({ works, projectType }: WorksProps) {
 					{works.map((work, index) => {
 						const frameStyles = {
 							transform: `translateY(${
-								110 - 817 * displayedProject
+								110 - (817 + heightFactor) * displayedProject
 							}px)`,
 							transition: "transform 1s ease-out"
 						}
