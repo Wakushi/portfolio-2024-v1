@@ -1,74 +1,36 @@
+import { ChatContext } from "@/services/ChatProvider"
 import classes from "./header.module.scss"
-import { useRef } from "react"
+import { useContext, useRef } from "react"
 
 export default function Header() {
-	const linkBubble = useRef<HTMLDivElement | null>(null)
-
-	function onLinkClick(event: any) {
-		const linkName = event.target.innerText
-		const linkPos = event.target.getBoundingClientRect().x
-		if (linkBubble.current) {
-			linkBubble.current.style.transform = `translateX(${
-				linkPos - 292
-			}px)`
-
-			switch (linkName) {
-				case "Contact":
-					linkBubble.current.style.width = "100px"
-					break
-				case "About":
-					linkBubble.current.style.width = "90px"
-					break
-				case "Work":
-					linkBubble.current.style.width = "80px"
-					break
-
-				default:
-					linkBubble.current.style.width = "70px"
-					break
-			}
-		}
-	}
+	const { toggleChatModal } = useContext(ChatContext)
 
 	return (
 		<header className={`${classes.header} fade-in-top`}>
 			<nav className="flex">
 				<ul className="flex--center gap-xl">
 					<li>
-						<a
-							href="#works"
-							onClick={onLinkClick}
-							onMouseOver={onLinkClick}
-						>
+						<a href="#works">
 							<span className={classes.nav_link}>Work</span>
 						</a>
 					</li>
 					<li>
-						<a
-							href="#profile"
-							onClick={onLinkClick}
-							onMouseOver={onLinkClick}
-						>
+						<a href="#profile">
 							<span className={classes.nav_link}>About</span>
 						</a>
 					</li>
 					<li>
-						<a
-							href="#"
-							onClick={onLinkClick}
-							onMouseOver={onLinkClick}
-						>
+						<a href="#">
 							<span className={classes.nav_link}>Blog</span>
 						</a>
 					</li>
 					<li>
-						<a
-							href="#"
-							onClick={onLinkClick}
-							onMouseOver={onLinkClick}
+						<button
+							className={classes.nav_link}
+							onClick={toggleChatModal}
 						>
-							<span className={classes.nav_link}>Contact</span>
-						</a>
+							Contact
+						</button>
 					</li>
 				</ul>
 				<ul className="flex--center gap-xl">

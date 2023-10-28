@@ -28,7 +28,7 @@ export default function About() {
 	return (
 		<section
 			id="profile"
-			className={`${classes.profile_section} flex--center gap-xl`}
+			className={`${classes.profile_section} flex--center gap-l`}
 		>
 			<div className={`${classes.profile_part} flex--center`}>
 				<div

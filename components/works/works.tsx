@@ -14,8 +14,8 @@ interface Work {
 }
 
 export enum ProjectType {
-	PERSO = "Side projects",
-	PRO = "Works"
+	PERSO = "Solo projects",
+	PRO = "Professional projects"
 }
 
 export default function Works({ works, projectType }: WorksProps) {
