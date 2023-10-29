@@ -135,7 +135,8 @@ i {
 }
 
 .classic-button {
-	background-color: #a162e8;
+	background-color: $light-color-l2;
+	color: #fff;
 	font-weight: 700;
 	border: 1px solid rgba(68, 68, 68, 0.411);
 	border-radius: 0.5em;
@@ -147,15 +148,15 @@ i {
 
 .classic-button:hover,
 .classic-button:focus {
-	background-color: aliceblue;
-	color: #a162e8;
+	background-color: #fff;
+	color: $light-color-l2;
 }
 
 .chat-icon {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-color: $secondary-color;
+	background-color: $light-color-l2;
 	border-radius: 50%;
 	padding: 0.8em;
 	opacity: 0.4;

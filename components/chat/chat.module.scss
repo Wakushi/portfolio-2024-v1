@@ -8,6 +8,10 @@
 	box-shadow: 10px 10px 40px black;
 	width: 260px;
 	overflow: hidden;
+
+	@media (width > 768px) {
+		width: 320px;
+	}
 }
 
 .chat_modal__header {
@@ -18,7 +22,7 @@
 .chat_modal__header__picture {
 	width: 40px;
 	height: 40px;
-	border: 2px white solid;
+	border: 2px #fff solid;
 	border-radius: 50%;
 	overflow: hidden;
 	margin-right: 0.4em;
@@ -41,6 +45,7 @@
 	flex-direction: column;
 	text-align: start;
 	margin-right: auto;
+	align-items: flex-start !important;
 }
 
 .chat_modal__header__text span {
