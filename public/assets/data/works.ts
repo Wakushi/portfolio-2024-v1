@@ -181,6 +181,7 @@ export function getWorkById(id: string) {
 
 export function getNextWork(id: string): Work {
 	const index = worksData.findIndex((work) => work.id === id)
+	console.log(index)
 	if (index === worksData.length - 1) {
 		return worksData[0]
 	}

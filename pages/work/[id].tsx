@@ -22,13 +22,19 @@ export default function WorkDetails() {
 		)
 	}
 
-	function goToNextWork() {
+	function goToNextWork(): void {
 		if (!work) return
 		let nextWorkId = +work.id === worksData.length ? 0 : +work.id + 1
 		if (nextWorkId === 0) {
 			nextWorkId++
 		}
 		router.push(`/work/${nextWorkId}`)
+	}
+
+	function goToPrevWork(): void {
+		if (!work) return
+		let prevWorkId = +work.id === 1 ? worksData.length : +work.id - 1
+		router.push(`/work/${prevWorkId}`)
 	}
 
 	return (
@@ -93,11 +99,11 @@ export default function WorkDetails() {
 					className={`${classes.next_work_button} flex--center gap-s`}
 					onClick={(event) => {
 						event.preventDefault()
-						goToNextWork()
+						goToPrevWork()
 					}}
 				>
 					<i className="fa-solid fa-arrow-left"></i>
-					{getNextWork(work?.id)?.title}
+					{getPrevWork(work?.id)?.title}
 				</a>
 				<a
 					href="#"
@@ -107,7 +113,7 @@ export default function WorkDetails() {
 						goToNextWork()
 					}}
 				>
-					{getPrevWork(work?.id)?.title}
+					{getNextWork(work?.id)?.title}
 					<i className="fa-solid fa-arrow-right"></i>
 				</a>
 			</div>
