@@ -92,7 +92,7 @@ export default function Chat() {
 					<textarea
 						id="message"
 						name="message"
-						placeholder="I like your work !"
+						placeholder="How are you doing ?"
 						required
 						rows={8}
 						onChange={handleInputChange}

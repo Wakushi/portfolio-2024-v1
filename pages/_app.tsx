@@ -21,9 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
 				/>
 			</Head>
 			<ChatProvider>
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
+				<main className="main_container">
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
+				</main>
 			</ChatProvider>
 		</>
 	)

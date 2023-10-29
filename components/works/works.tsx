@@ -1,22 +1,8 @@
 import { useEffect, useState } from "react"
 import classes from "./works.module.scss"
 import AnimatedText from "../ui/animated-text/animated-text"
-
-interface WorksProps {
-	works: Work[]
-	projectType: ProjectType
-}
-
-interface Work {
-	title: string
-	type: string
-	image: string
-}
-
-export enum ProjectType {
-	PERSO = "Solo projects",
-	PRO = "Professional projects"
-}
+import { useRouter } from "next/router"
+import { WorksProps } from "@/public/assets/data/works"
 
 export default function Works({ works, projectType }: WorksProps) {
 	const [userTouched, setUserTouched] = useState(false)
@@ -31,6 +17,7 @@ export default function Works({ works, projectType }: WorksProps) {
 		transition: "transform 1s ease-out"
 	}
 
+	const router = useRouter()
 	const heightFactor = 65
 
 	useEffect(() => {
@@ -77,11 +64,19 @@ export default function Works({ works, projectType }: WorksProps) {
 								className={classes.work_image_container}
 								style={frameStyles}
 							>
-								<img
-									src={work.image}
-									alt={work.title}
-									onMouseOver={onHoverProject}
-								/>
+								<a
+									href="#"
+									onClick={(event) => {
+										event.preventDefault()
+										router.push(`work/${work.id}`)
+									}}
+								>
+									<img
+										src={work.image}
+										alt={work.title}
+										onMouseOver={onHoverProject}
+									/>
+								</a>
 							</div>
 						)
 					})}

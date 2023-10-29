@@ -1,0 +1,123 @@
+@import "../../styles/variables.scss";
+
+.work_detail_container {
+	min-height: 100vh;
+	overflow: hidden;
+	.work_image_container {
+		position: relative;
+		overflow: hidden;
+
+		.work_image {
+			animation: fade-in 1s ease-out forwards;
+			transition: transform 1s ease-out, width 1s ease-out;
+			max-height: 100vh;
+		}
+
+		.work_detail_content {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			padding: 10rem 0rem;
+			width: 100%;
+			height: 100%;
+
+			.work_detail_content_top {
+				h1,
+				h3 {
+					text-shadow: $text-shadow;
+				}
+
+				h1 {
+					font-family: $third-font;
+					letter-spacing: -4px;
+					font-size: 6vw;
+					font-weight: 600;
+					border-bottom: 1px solid #ffff;
+					width: fit-content;
+					padding-left: 5rem;
+					line-height: 1;
+				}
+
+				h3 {
+					font-family: $secondary-font;
+					font-size: 2vw;
+					font-weight: 400;
+					width: fit-content;
+					padding-right: 6rem;
+				}
+			}
+
+			.work_detail_content_bottom {
+				padding: 4rem;
+				justify-content: space-evenly;
+				.work_screen_image_container {
+					width: 800px;
+					filter: drop-shadow(0px 5px 40px $shadow-color);
+				}
+
+				.work_detail_description {
+					align-self: baseline;
+					line-height: 1.3;
+					text-shadow: $text-shadow;
+					font-size: 1.6vw;
+
+					padding: 2rem 0rem;
+					max-width: 650px;
+				}
+			}
+		}
+	}
+
+	.next_work_button {
+		position: absolute;
+		color: $primary-color;
+		background: #fff;
+		font-size: 1.3rem;
+		font-weight: 600;
+		z-index: 3;
+		bottom: 10%;
+		right: 20%;
+		padding: 0.7rem 1.8rem;
+		border-radius: 0.2rem;
+		transition: 300ms ease-in-out;
+		cursor: pointer;
+
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.55);
+
+		i {
+			color: $primary-color;
+			margin-top: 0.3rem;
+			transition: 300ms ease-in-out;
+		}
+
+		&:hover,
+		&:focus-visible {
+			background-color: $primary-color;
+			color: #fff;
+			transform: translate(0%, -4%);
+
+			i {
+				color: #fff;
+				transform: translateX(-5px);
+			}
+		}
+	}
+}
+
+.work_not_found {
+	min-height: 100vh;
+
+	p {
+		font-family: $secondary-font;
+		font-size: 4vw;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}

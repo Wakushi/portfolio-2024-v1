@@ -1,21 +1,35 @@
 import { ChatContext } from "@/services/ChatProvider"
 import classes from "./header.module.scss"
-import { useContext, useRef } from "react"
+import { useRouter } from "next/router"
+import { useContext } from "react"
 
 export default function Header() {
 	const { toggleChatModal } = useContext(ChatContext)
+	const router = useRouter()
 
 	return (
-		<header className={`${classes.header} fade-in-top`}>
+		<header className={`${classes.header} fade-in-top-fast`}>
 			<nav className="flex">
 				<ul className="flex--center gap-xl">
 					<li>
-						<a href="#works">
+						<a
+							href="#"
+							onClick={(event) => {
+								event.preventDefault()
+								router.push(`/#works`)
+							}}
+						>
 							<span className={classes.nav_link}>Work</span>
 						</a>
 					</li>
 					<li>
-						<a href="#profile">
+						<a
+							href="#"
+							onClick={(event) => {
+								event.preventDefault()
+								router.push(`/#profile`)
+							}}
+						>
 							<span className={classes.nav_link}>About</span>
 						</a>
 					</li>
