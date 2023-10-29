@@ -87,7 +87,7 @@ export default function WorkDetails() {
 				</div>
 			</div>
 
-			<div className={`${classes.navigation_button} flex gap-m`}>
+			<div className={`${classes.navigation_button} flex gap-l`}>
 				<a
 					href="#"
 					className={`${classes.next_work_button} flex--center gap-s`}
