@@ -88,7 +88,7 @@ export const worksData: Work[] = [
 		screenImage: "/assets/images/projects/multisig-screen.webp",
 		desc: "MultiSig Factory is a web app that allows anyone to create and manage a MultiSig wallet. Users can easily create, confirm and execute transactions from their multi-signature wallet. (Sepolia testnet only)",
 		type: "dApp",
-		stack: "NextJS / Solidity / Foundry / Ethers.js / Alchemy",
+		stack: "NextJS / Foundry / Ethers.js / Alchemy",
 		title: "Multi-sig Factory",
 		gitlink: "https://github.com/Wakushi/multisig-wallet-factory",
 		link: "https://multisig-wallet-factory.vercel.app/"
@@ -127,7 +127,7 @@ export const worksData: Work[] = [
 		stack: "Solidity / Foundry / Chainlink",
 		title: "Smart lottery",
 		gitlink: "https://github.com/Wakushi/foundry-smart-contract-lottery",
-		link: "none"
+		link: ""
 	},
 	{
 		id: "10",
@@ -151,7 +151,7 @@ export const worksData: Work[] = [
 		stack: "Solidity / Foundry / Chainlink",
 		title: "Crowd Funding",
 		gitlink: "https://github.com/Wakushi/foundry-fund-me-f23",
-		link: "none"
+		link: ""
 	},
 	{
 		id: "12",
@@ -162,8 +162,8 @@ export const worksData: Work[] = [
 		type: "Web App",
 		stack: "React / OpenAI API",
 		title: "Kanga",
-		gitlink: "none",
-		link: "none"
+		gitlink: "",
+		link: ""
 	}
 ]
 
@@ -177,4 +177,20 @@ export function getSideWorks() {
 
 export function getWorkById(id: string) {
 	return worksData.find((work) => work.id === id)
+}
+
+export function getNextWork(id: string): Work {
+	const index = worksData.findIndex((work) => work.id === id)
+	if (index === worksData.length - 1) {
+		return worksData[0]
+	}
+	return worksData[index + 1]
+}
+
+export function getPrevWork(id: string): Work {
+	const index = worksData.findIndex((work) => work.id === id)
+	if (index === 0) {
+		return worksData[worksData.length - 1]
+	}
+	return worksData[index - 1]
 }

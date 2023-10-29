@@ -1,6 +1,11 @@
 import { useRouter } from "next/router"
 import classes from "./work-details.module.scss"
-import { getWorkById, worksData } from "@/public/assets/data/works"
+import {
+	getNextWork,
+	getPrevWork,
+	getWorkById,
+	worksData
+} from "@/public/assets/data/works"
 
 export default function WorkDetails() {
 	const router = useRouter()
@@ -38,9 +43,32 @@ export default function WorkDetails() {
 					<div
 						className={`${classes.work_detail_content_top} flex--between`}
 					>
-						<h1>{work?.title}</h1>
-
-						<h3>{work?.stack}</h3>
+						<h1>{work?.title} </h1>
+						<div
+							className={`${classes.work_content_right} flex--column`}
+						>
+							<h3>{work?.stack}</h3>
+							<div className="flex gap-l">
+								{work.gitlink && (
+									<a
+										className=""
+										target="_blank"
+										href={work.gitlink}
+									>
+										<i className="fa-brands fa-github"></i>
+									</a>
+								)}
+								{work.link && (
+									<a
+										className=""
+										target="_blank"
+										href={work.link}
+									>
+										<i className="fa-solid fa-globe"></i>
+									</a>
+								)}
+							</div>
+						</div>
 					</div>
 					<div
 						className={`${classes.work_detail_content_bottom} flex`}
@@ -59,17 +87,30 @@ export default function WorkDetails() {
 				</div>
 			</div>
 
-			<a
-				href="#"
-				className={`${classes.next_work_button} flex--center gap-m`}
-				onClick={(event) => {
-					event.preventDefault()
-					goToNextWork()
-				}}
-			>
-				Next project
-				<i className="fa-solid fa-arrow-right"></i>
-			</a>
+			<div className={`${classes.navigation_button} flex gap-m`}>
+				<a
+					href="#"
+					className={`${classes.next_work_button} flex--center gap-s`}
+					onClick={(event) => {
+						event.preventDefault()
+						goToNextWork()
+					}}
+				>
+					<i className="fa-solid fa-arrow-left"></i>
+					{getNextWork(work?.id)?.title}
+				</a>
+				<a
+					href="#"
+					className={`${classes.next_work_button} flex--center gap-s`}
+					onClick={(event) => {
+						event.preventDefault()
+						goToNextWork()
+					}}
+				>
+					{getPrevWork(work?.id)?.title}
+					<i className="fa-solid fa-arrow-right"></i>
+				</a>
+			</div>
 		</div>
 	)
 }
