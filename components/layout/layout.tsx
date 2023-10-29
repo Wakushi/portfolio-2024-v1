@@ -16,7 +16,7 @@ export default function Layout(props: LayoutProps) {
 			<main>{props.children}</main>
 			{chatOpen && <Chat />}
 			<div onClick={toggleChatModal} className="chat-icon">
-				<img src="/assets/images/chat.png" alt="chatbox icon"></img>
+				<img src="/assets/images/chat.webp" alt="chatbox icon"></img>
 			</div>
 		</>
 	)

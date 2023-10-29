@@ -108,7 +108,7 @@ export const worksData: Work[] = [
 	{
 		id: "8",
 		context: "perso",
-		image: "/assets/images/projects/paths.png",
+		image: "/assets/images/projects/paths.webp",
 		screenImage: "/assets/images/projects/paths-screen.webp",
 		desc: "Paths is a Reigns-like game. You're a time and space traveler, captain of your own ship. All of your decisions will impact the fate of your crew and your journey through the universe.",
 		type: "Mobile Game",
@@ -120,7 +120,7 @@ export const worksData: Work[] = [
 	{
 		id: "9",
 		context: "perso",
-		image: "/assets/images/projects/lottery.png",
+		image: "/assets/images/projects/lottery.webp",
 		screenImage: "/assets/images/projects/lottery-screen.webp",
 		desc: "Solidity Lottery Smart Contract made using Foundry and Chainlink. This contracts allows anyone to buy a ticket to enter the lottery and a random winner selected every X minutes will win the pot. All this process is automated using the Chainlink VRF and Chainlink Automation.",
 		type: "Smart Contract",
@@ -132,7 +132,7 @@ export const worksData: Work[] = [
 	{
 		id: "10",
 		context: "perso",
-		image: "/assets/images/projects/helix-vault.png",
+		image: "/assets/images/projects/helix-vault.webp",
 		screenImage: "/assets/images/projects/helix-vault-screen.webp",
 		desc: "Helix Vault is a web app that allows anyone to get information about any Helix holder's staked items, without the need for wallet connection.",
 		type: "Web3 App",
