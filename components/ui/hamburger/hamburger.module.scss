@@ -1,0 +1,45 @@
+.hamburger_icon {
+	position: relative;
+	margin-left: auto;
+	z-index: 12;
+	cursor: pointer;
+
+	@media (width >= 768px) {
+		display: none;
+	}
+}
+
+.hamburger_menu {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 28px;
+	height: 24.5px;
+	gap: 11px;
+	pointer-events: none;
+}
+
+.bar {
+	width: 100%;
+	max-width: 25px;
+	height: 3px;
+	background-color: #ffffff;
+	transition: transform 0.2s ease-in-out;
+}
+
+.bar.middle {
+	position: absolute;
+}
+
+.hamburger_menu.open .bar.middle {
+	transform: rotate(45deg);
+}
+
+.hamburger_menu.open .bar.top {
+	transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger_menu.open .bar.bottom {
+	transform: translateY(-8px) rotate(-45deg);
+}

@@ -8,36 +8,45 @@
 	background: -webkit-linear-gradient(bottom, transparent, $shadow-color);
 	opacity: 0;
 
-	ul {
-		position: relative;
-		width: fit-content;
-		margin: 0 auto;
-		padding: 0 1.1rem;
-	}
+	.header_nav {
+		display: none;
+		width: -webkit-fill-available;
 
-	li {
-		font-size: 1.1rem;
-		font-weight: 600;
-		padding: 1rem 0;
-
-		button.nav_link,
-		span.nav_link {
+		@media (width >= 768px) {
+			display: flex;
+			justify-content: space-evenly;
+		}
+		ul {
 			position: relative;
+			width: fit-content;
+			margin: 0 auto;
+			padding: 0 1.1rem;
+		}
 
-			&::before {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: -2px;
-				background-color: $secondary-color;
-				width: 0%;
-				height: 2px;
-				transition: 0.4s;
-			}
+		li {
+			font-size: 1.1rem;
+			font-weight: 600;
+			padding: 1rem 0;
 
-			&:hover::before,
-			&:focus::before {
-				width: 100%;
+			button.nav_link,
+			span.nav_link {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -2px;
+					background-color: $secondary-color;
+					width: 0%;
+					height: 2px;
+					transition: 0.4s;
+				}
+
+				&:hover::before,
+				&:focus::before {
+					width: 100%;
+				}
 			}
 		}
 	}

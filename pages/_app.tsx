@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/layout"
 import ChatProvider from "@/services/ChatProvider"
+import NavigationProvider from "@/services/NavigationProvider"
 import "@/styles/globals.scss"
 import type { AppProps } from "next/app"
 import Head from "next/head"
@@ -20,13 +21,16 @@ export default function App({ Component, pageProps }: AppProps) {
 					referrerPolicy="no-referrer"
 				/>
 			</Head>
-			<ChatProvider>
-				<main className="main_container">
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</main>
-			</ChatProvider>
+			<NavigationProvider>
+				<ChatProvider>
+					<main className="main_container">
+						<Layout>
+							<Component {...pageProps} />
+							
+						</Layout>
+					</main>
+				</ChatProvider>
+			</NavigationProvider>
 		</>
 	)
 }
